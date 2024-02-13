@@ -1,9 +1,16 @@
-import React from "react";
-// import logo from "assets\logo.png"; 
 import logo from "./assets/logo.png";
 import cf from "./assets/cf.avif"
 import cybsec from "./assets/cybsec.jpg"
+import React, {useState} from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Routes,
+} from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-slate-200 w-full h-[100vh]">
       {/* Navigation Bar */}
@@ -31,13 +38,15 @@ const Home = () => {
       <div className="container mx-auto mt-8">
         <div className="flex justify-center item-center gap-10">
           {/* Card 1 */}
-          <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden mr-4 w-[40rem] hover:shadow-xl hover:cursor-pointer">
-            <img src={cf} alt="Placeholder" className="w-full h-64 object-cover" />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Computer Fundamentals</h2>
-              <p className="text-gray-700">course to get you ready with computers</p>
+          <Link to={"/compf"}>
+            <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden mr-4 w-[40rem] hover:shadow-xl hover:cursor-pointer">
+              <img src={cf} alt="Placeholder" className="w-full h-64 object-cover" />
+              <div className="p-4">
+                <h2 className="text-xl font-bold mb-2">Computer Fundamentals</h2>
+                <p className="text-gray-700">course to get you ready with computers</p>
+              </div>
             </div>
-          </div>
+          </Link>
 
           {/* Card 2 */}
           <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden w-[40rem] hover:shadow-xl hover:cursor-pointer">
