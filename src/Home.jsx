@@ -16,9 +16,13 @@ const Home = () => {
       {/* Navigation Bar */}
       <nav className="flex items-center justify-between bg-gray-800 p-4">
         {/* Logo */}
-        <div className="flex items-center">
-          <img src={logo} alt="Logo" className="h-8 mr-2" />
-        </div>
+        
+        <div  className="flex items-center">
+        <a href="google.com">
+        <img src={logo} alt="Logo" className="h-8 mr-2" />
+        </a>
+       </div>
+      
         {/* Logout Button */}
         <button className="text-white">Logout</button>
       </nav>

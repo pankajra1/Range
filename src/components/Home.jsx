@@ -12,7 +12,7 @@ function Home() {
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-16 mr-4" />
         </div>
-
+        
         {/* Logout Button */}
         <button className="text-white font-impact">Logout</button>
       </nav>
