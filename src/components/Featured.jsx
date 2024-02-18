@@ -1,8 +1,11 @@
 import React from "react"; 
 import logo from "/src/assets/logo.png";
-import cf from "/src/assets/cf.avif";
 import course1 from "/src/assets/course1.png";
-import cybsec from "/src/assets/cybsec.jpg";
+import course2 from "/src/assets/course2.png";
+import course3 from "/src/assets/course3.png";
+import Course4 from "/src/assets/course4.png";
+import course5 from "/src/assets/course5.png";
+import course6 from "/src/assets/course6.png";
 function Featured() {
   return (
     <div>
@@ -30,7 +33,7 @@ function Featured() {
         <div className="grid grid-cols-3 gap-10">
           {/* Card 1 */}
           <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden">
-            <img src={cf} alt="Computer Fundamentals" className="w-full h-64 object-cover" />
+            <img src={course1} alt="Course1" className="w-full h-64 object-cover" />
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2">Course 1</h2>
               <p className="text-gray-700">This is the First course that we want to sell to you</p>
@@ -39,7 +42,7 @@ function Featured() {
 
           {/* Card 2 */}
           <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden">
-            <img src={course1} alt="CyberSecurity Fundamentals" className="w-full h-64 object-cover" />
+            <img src={course2} alt="Course2" className="w-full h-64 object-cover" />
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2">Course 2</h2>
               <p className="text-gray-700">This is the Second course that we want to sell to you</p>
@@ -48,7 +51,7 @@ function Featured() {
 
           {/* Card 3 */}
           <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden">
-            <img src={cf} alt="Computer Fundamentals" className="w-full h-64 object-cover" />
+            <img src={course3} alt="Course3" className="w-full h-64 object-cover" />
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2">Course 3</h2>
               <p className="text-gray-700">This is the Third course that we want to sell to you</p>
@@ -57,7 +60,7 @@ function Featured() {
 
           {/* Card 4 */}
           <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden">
-            <img src={cybsec} alt="CyberSecurity Fundamentals" className="w-full h-64 object-cover" />
+            <img src={Course4} alt="Course4" className="w-full h-64 object-cover" />
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2">Course 4</h2>
               <p className="text-gray-700">This is the Fourth course that we want to sell to you</p>
@@ -66,7 +69,7 @@ function Featured() {
 
           {/* Card 5 */}
           <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden">
-            <img src={cf} alt="Computer Fundamentals" className="w-full h-64 object-cover" />
+            <img src={course5} alt="Course5" className="w-full h-64 object-cover" />
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2">Course 5</h2>
               <p className="text-gray-700">This is the Fifth course that we want to sell to you</p>
@@ -75,7 +78,7 @@ function Featured() {
 
           {/* Card 6 */}
           <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden">
-            <img src={cybsec} alt="CyberSecurity Fundamentals" className="w-full h-64 object-cover" />
+            <img src={course6} alt="Course6" className="w-full h-64 object-cover" />
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2">Course 6</h2>
               <p className="text-gray-700">This is the Sixth course that we want to sell to you</p>
