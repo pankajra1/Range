@@ -2,12 +2,6 @@ import React from "react";
 import logo from "/src/assets/logo.png";
 import cf from "/src/assets/cf.avif";
 import cybsec from "/src/assets/cybsec.jpg";
-import course1 from "/src/assets/course1.png";
-import course2 from "/src/assets/course2.png";
-import course3 from "/src/assets/course3.png";
-import course4 from "/src/assets/course4.png";
-import course5 from "/src/assets/course5.png";
-import course6 from "/src/assets/course6.png";
 function Featured() {
   return (
     <div>
@@ -35,7 +29,7 @@ function Featured() {
         <div className="grid grid-cols-3 gap-10">
           {/* Card 1 */}
           <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden">
-            <img src={course1} alt="Course1" className="w-full h-64 object-cover" />
+            <img src={cf} alt="Computer Fundamentals" className="w-full h-64 object-cover" />
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2">Course 1</h2>
               <p className="text-gray-700">This is the First course that we want to sell to you</p>
