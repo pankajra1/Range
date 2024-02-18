@@ -12,12 +12,12 @@ function Featured() {
       {/* Navigation Bar */}
       <nav className="flex items-center justify-between bg-gray-800 p-4">
         {/* Logo with link */}
-        <a href="https://cyberpeace.org" target="_blank" rel="noopener noreferrer">
+        <a href="/Home" target="_blank" rel="noopener noreferrer">
           <img src={logo} alt="Logo" className="h-16 mr-4" />
         </a>
 
         {/* Logout Button with link */}
-        <a href="https://cyberrange.com/login" target="_blank" rel="noopener noreferrer" className="text-white font-impact">Logout</a>
+        <a href="/" className="text-white font-impact">Logout</a>
       </nav>
 
       {/* Main Content */}
