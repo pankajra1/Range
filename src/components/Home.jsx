@@ -25,12 +25,12 @@ function Home() {
         </center>
         <div>
           <center>
-            <h1 className="text-xl mt-5 font-Arial">Courses offered by Cyberpeace foundation</h1>
+            <h1 className="text-xl mt-5 font-Arial"> Choose your Path from the Courses offered by Cyberpeace foundation</h1>
           </center>
 
         </div>
       </div>
-      <div className="container mx-auto mt-8">
+      <div className="container mx-auto mt-8 mb-10">
         <div className="flex justify-center item-center gap-10">
           {/* Card 1 */}
           <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden mr-4">

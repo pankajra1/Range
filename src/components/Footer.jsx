@@ -3,7 +3,7 @@ import logo from "/src/assets/logo.png";
 export default function App() {
   return (
     <footer
-      className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
+      className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left mt-20">
       <div
         className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="mr-12 hidden lg:block">
@@ -34,7 +34,7 @@ export default function App() {
             </svg>
           </a>
           {/* google+ link */}
-          <a className="mr-6 text-neutral-600 dark:text-neutral-200">
+          {/* <a className="mr-6 text-neutral-600 dark:text-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -45,7 +45,7 @@ export default function App() {
                 fillRule="evenodd"
                 clipRule="evenodd" />
             </svg>
-          </a>
+          </a> */}
           {/* instagram link */}
           <a className="mr-6 text-neutral-600 dark:text-neutral-200">
             <svg
