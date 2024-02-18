@@ -1,6 +1,7 @@
 import React from "react"; 
 import logo from "/src/assets/logo.png";
 import cf from "/src/assets/cf.avif";
+import course1 from "/src/assets/course1.png";
 import cybsec from "/src/assets/cybsec.jpg";
 function Featured() {
   return (
@@ -38,7 +39,7 @@ function Featured() {
 
           {/* Card 2 */}
           <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden">
-            <img src={cybsec} alt="CyberSecurity Fundamentals" className="w-full h-64 object-cover" />
+            <img src={course1} alt="CyberSecurity Fundamentals" className="w-full h-64 object-cover" />
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2">Course 2</h2>
               <p className="text-gray-700">This is the Second course that we want to sell to you</p>
