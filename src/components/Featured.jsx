@@ -2,6 +2,12 @@ import React from "react";
 import logo from "/src/assets/logo.png";
 import cf from "/src/assets/cf.avif";
 import cybsec from "/src/assets/cybsec.jpg";
+import course1 from "/src/assets/course1.png";
+import course2 from "/src/assets/course2.png";
+import course3 from "/src/assets/course3.png";
+import course4 from "/src/assets/course4.png";
+import course5 from "/src/assets/course5.png";
+import course6 from "/src/assets/course6.png";
 function Featured() {
   return (
     <div>
