@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import logo from "/src/assets/logo.png";
 import cf from "/src/assets/cf.avif";
 import cybsec from "/src/assets/cybsec.jpg";
@@ -26,7 +27,7 @@ function Home() {
       <div className="container mx-auto mt-8 px-40 mt-10 px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {/* Card 1 */}
-          <a href="/Featured"> {/* Add anchor tag and set the "href" attribute to the desired page */}
+          <Link to="/Featured"> {/* Replace anchor tag with Link and set "to" attribute to the desired route */}
             <div className="relative overflow-hidden bg-white shadow-md rounded-md transition duration-300 ease-in-out transform hover:scale-105 group">
               <div className="overflow-hidden">
                 <img src={cf} alt="Computer Fundamentals" className="w-full h-64 object-cover" />
@@ -37,10 +38,10 @@ function Home() {
                 <p className="text-gray-700">Course to get you ready with computers</p>
               </div>
             </div>
-          </a>
+          </Link>
 
           {/* Card 2 */}
-          <a href="/course2"> {/* Add anchor tag and set the "href" attribute to the desired page */}
+          <Link to="/Featured"> {/* Replace anchor tag with Link and set "to" attribute to the desired route */}
             <div className="relative overflow-hidden bg-white shadow-md rounded-md transition duration-300 ease-in-out transform hover:scale-105 group">
               <div className="overflow-hidden">
                 <img src={cybsec} alt="CyberSecurity Fundamentals" className="w-full h-64 object-cover" />
@@ -51,7 +52,7 @@ function Home() {
                 <p className="text-gray-700">Start your journey in the field of cybersecurity</p>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
