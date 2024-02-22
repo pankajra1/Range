@@ -11,17 +11,6 @@ import course6 from "/src/assets/course6.png";
 function Featured() {
   return (
     <div>
-      {/* Navigation Bar */}
-      <nav className="flex items-center justify-between bg-gray-800 p-4">
-        {/* Logo with Link */}
-        <Link to="/Home">
-          <img src={logo} alt="Logo" className="h-16 mr-4" />
-        </Link>
-
-        {/* Logout Button with Link */}
-        <Link to="/" className="text-white font-impact">Logout</Link>
-      </nav>
-
       {/* Main Content */}
       <div>
         <center>

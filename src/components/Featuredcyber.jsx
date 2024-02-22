@@ -11,17 +11,6 @@ import course6 from "/src/assets/course6.png";
 function Featured() {
   return (
     <div>
-      {/* Navigation Bar */}
-      <nav className="flex items-center justify-between bg-gray-800 p-4">
-        {/* Logo with Link */}
-        <Link to="/Home">
-          <img src={logo} alt="Logo" className="h-16 mr-4" />
-        </Link>
-
-        {/* Logout Button with Link */}
-        <Link to="/" className="text-white font-impact">Logout</Link>
-      </nav>
-
       {/* Main Content */}
       <div>
         <center>
@@ -37,7 +26,7 @@ function Featured() {
             <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden transform transition duration-300 ease-in-out hover:scale-105">
               <img src={course1} alt="Course1" className="w-full h-64 object-cover" />
               <div className="p-4">
-                <h2 className="text-xl font-bold mb-2">Course 1</h2>
+                <h2 className="text-xl font-bold mb-2">Foundations in CyberSecurity</h2>
                 <p className="text-gray-700">This is the First course that we want to sell to you</p>
               </div>
             </div>

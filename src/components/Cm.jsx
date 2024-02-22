@@ -1,23 +1,17 @@
-import React, {useState} from 'react'
-import logo from "../assets/logo.png";
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import logo from '../assets/logo.png';
+
 const Cm = () => {
   return (
     <div>
-        <nav className="flex items-center justify-between bg-gray-800 p-4">
-        {/* Logo with Link */}
-        <Link to="/Home">
-          <img src={logo} alt="Logo" className="h-16 mr-4" />
-        </Link>
-        {/* Logout Button with Link */}
-        <Link to="/" className="text-white font-impact">Logout</Link>
-      </nav>
       <div className='grid grid-cols-4 h-[100vh]'>
         <div className='col-span-1 h-[100vh] flex flex-col gap-6 items-center bg-slate-100 border-2 border-slate-200'>
-            <div className='bg-white border-blue-500 border-2 w-60 h-12 rounded-md mt-10 justify-center items-center flex font-medium hover:bg-blue-500 hover:text-white hover:transition'>Module - 1</div>
-            <div className='bg-white border-blue-500 border-2 w-60 h-12 rounded-md mt-2 justify-center items-center flex font-medium hover:bg-blue-500 hover:text-white hover:transition'>Module - 2</div>
-            <div className='bg-white border-blue-500 border-2 w-60 h-12 rounded-md mt-2 justify-center items-center flex font-medium hover:bg-blue-500 hover:text-white hover:transition'>Module - 3</div>
-            <div className='bg-white border-blue-500 border-2 w-60 h-12 rounded-md mt-2 justify-center items-center flex font-medium hover:bg-blue-500 hover:text-white hover:transition'>Module - 4</div>
-            <div className='bg-white border-blue-500 border-2 w-60 h-12 rounded-md mt-2 justify-center items-center flex font-medium hover:bg-blue-500 hover:text-white hover:transition'>Module - 5</div>
+            <div className='bg-white border-blue-500 border-2 w-60 h-12 rounded-md mt-10 justify-center items-center flex font-medium hover:bg-blue-500 hover:text-white hover:transition'>Introduction</div>
+            <div className='bg-white border-blue-500 border-2 w-60 h-12 rounded-md mt-2 justify-center items-center flex font-medium hover:bg-blue-500 hover:text-white hover:transition'>Course plan</div>
+            <div className='bg-white border-blue-500 border-2 w-60 h-12 rounded-md mt-2 justify-center items-center flex font-medium hover:bg-blue-500 hover:text-white hover:transition'>History</div>
+            <div className='bg-white border-blue-500 border-2 w-60 h-12 rounded-md mt-2 justify-center items-center flex font-medium hover:bg-blue-500 hover:text-white hover:transition'>Common attacks</div>
+            {/* <div className='bg-white border-blue-500 border-2 w-60 h-12 rounded-md mt-2 justify-center items-center flex font-medium hover:bg-blue-500 hover:text-white hover:transition'>Module - 5</div> */}
         </div>
         <div className='col-span-3 h-[100vh] p-16 flex flex-col gap-6'>
             <div className='text-2xl font-bold'>Course Name</div>
@@ -60,9 +54,8 @@ const Cm = () => {
             </div>
         </div>
       </div>
-
     </div>
   )
 }
 
-export default Cm
+export default Cm;

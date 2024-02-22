@@ -7,16 +7,6 @@ import cybsec from "/src/assets/cybsec.jpg";
 function Home() {
   return (
     <div>
-      {/* Navigation Bar */}
-      <nav className="flex items-center justify-between bg-gray-800 p-4">
-        {/* Logo */}
-        <div className="flex items-center">
-          <img src={logo} alt="Logo" className="h-12 mr-2" />
-        </div>
-        {/* Logout Button with Link */}
-        <Link to="/" className="text-white font-impact">Logout</Link>
-      </nav>
-
       {/* Main Content */}
       <div className="text-center mt-10 px-4">
         <h1 className="text-3xl md:text-4xl font-Helvetica">Start your cybersecurity learning</h1>

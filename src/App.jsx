@@ -8,9 +8,11 @@ import Featuredcompf from './components/Featuredcompf';
 import Featuredcyber from './components/Featuredcyber';
 import Footer from './components/Footer';
 import './App.css';
+import Layout from './layout';
 function App() {
   return (
     <Router>
+      <Layout>
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
@@ -20,6 +22,7 @@ function App() {
         <Route path='/home' element={<Home />} />
                 <Route   path='/compf' element={<Cm />} />
       </Routes>
+      </Layout>
       <Footer />
     </Router>
   );
