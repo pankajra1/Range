@@ -1,4 +1,5 @@
-import React from "react"; 
+import React from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import logo from "/src/assets/logo.png";
 import course1 from "/src/assets/course1.png";
 import course2 from "/src/assets/course2.png";
@@ -6,26 +7,26 @@ import course3 from "/src/assets/course3.png";
 import Course4 from "/src/assets/course4.png";
 import course5 from "/src/assets/course5.png";
 import course6 from "/src/assets/course6.png";
+
 function Featured() {
   return (
     <div>
       {/* Navigation Bar */}
       <nav className="flex items-center justify-between bg-gray-800 p-4">
-        {/* Logo with link */}
-        <a href="/Home" target="_blank" rel="noopener noreferrer">
+        {/* Logo with Link */}
+        <Link to="/Home">
           <img src={logo} alt="Logo" className="h-16 mr-4" />
-        </a>
+        </Link>
 
-        {/* Logout Button with link */}
-        <a href="/" className="text-white font-impact">Logout</a>
+        {/* Logout Button with Link */}
+        <Link to="/" className="text-white font-impact">Logout</Link>
       </nav>
 
       {/* Main Content */}
-
       <div>
         <center>
-        <h1 className="text-5xl mt-10 font-Helvetica font-bold text-customPurple">Computer Fundamentals</h1>
-        <h2 className="text-2xl mt-5 font-Helvetica">Featured Courses</h2>
+          <h1 className="text-5xl mt-10 font-Helvetica font-bold text-customPurple">Computer Fundamentals</h1>
+          <h2 className="text-2xl mt-5 font-Helvetica">Featured Courses</h2>
         </center>
       </div>
 

@@ -14,8 +14,8 @@ function Home() {
           <img src={logo} alt="Logo" className="h-16 mr-4" />
         </div>
 
-        {/* Logout Button */}
-        <button className="text-white font-impact">Logout</button>
+         {/* Logout Button with Link */}
+         <Link to="/" className="text-white font-impact">Logout</Link>
       </nav>
 
       {/* Main Content */}
