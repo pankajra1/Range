@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "/src/assets/logo.png";
 import course1 from "/src/assets/course1.png";
 import course2 from "/src/assets/course2.png";
 import course3 from "/src/assets/course3.png";
