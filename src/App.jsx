@@ -3,18 +3,20 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SignUp from './components/SignUp';
 import Login from './components/Login';
 import Home from './components/Home';
-import Featured from './components/Featured';
+import Cm from './components/Cm';
+import Featuredcompf from './components/Featuredcompf';
+import Featuredcyber from './components/Featuredcyber';
 import Footer from './components/Footer';
 import './App.css';
-
-import Cm from "./components/Cm"
 function App() {
   return (
     <Router>
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
-        <Route path='/Featured' element={<Featured/>}/>
+        <Route path='/Featuredcompf' element={<Featuredcompf/>}/>
+        <Route path='/Featuredcyber' element={<Featuredcyber/>}/>
+        <Route path='/cm' element={<Cm />} />
         <Route path='/home' element={<Home />} />
                 <Route   path='/compf' element={<Cm />} />
       </Routes>
