@@ -27,7 +27,7 @@ function Home() {
       <div className="container mx-auto mt-8 px-40 mt-10 px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {/* Card 1 */}
-          <Link to="/Featured"> {/* Replace anchor tag with Link and set "to" attribute to the desired route */}
+          <Link to="/Featuredcompf"> {/* Replace anchor tag with Link and set "to" attribute to the desired route */}
             <div className="relative overflow-hidden bg-white shadow-md rounded-md transition duration-300 ease-in-out transform hover:scale-105 group">
               <div className="overflow-hidden">
                 <img src={cf} alt="Computer Fundamentals" className="w-full h-64 object-cover" />
@@ -41,7 +41,7 @@ function Home() {
           </Link>
 
           {/* Card 2 */}
-          <Link to="/Featured"> {/* Replace anchor tag with Link and set "to" attribute to the desired route */}
+          <Link to="/Featuredcyber"> {/* Replace anchor tag with Link and set "to" attribute to the desired route */}
             <div className="relative overflow-hidden bg-white shadow-md rounded-md transition duration-300 ease-in-out transform hover:scale-105 group">
               <div className="overflow-hidden">
                 <img src={cybsec} alt="CyberSecurity Fundamentals" className="w-full h-64 object-cover" />
