@@ -1,10 +1,11 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
 import logo from "/src/assets/logo.png";
 import cf from "/src/assets/cf.avif";
 import cybsec from "/src/assets/cybsec.jpg";
 
 function Home() {
+  useEffect(() => {document.title = 'HOME:Learn';}, []);
   return (
     <div>
       {/* Main Content */}

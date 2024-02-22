@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
 import course1 from "/src/assets/course1.png";
 import course2 from "/src/assets/course2.png";
@@ -6,8 +6,8 @@ import course3 from "/src/assets/course3.png";
 import Course4 from "/src/assets/course4.png";
 import course5 from "/src/assets/course5.png";
 import course6 from "/src/assets/course6.png";
-
-function Featured() {
+function Featuredcompf() {
+  useEffect(() => {document.title = 'Computer Fundamentals';}, []);
   return (
     <div>
       {/* Main Content */}
@@ -91,4 +91,4 @@ function Featured() {
   );
 }
 
-export default Featured;
+export default Featuredcompf;
