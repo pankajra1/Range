@@ -34,7 +34,7 @@ const Navbar = () => {
       {/* Navigation Links */}
       <div className="flex space-x-4">
         <Link to="/home" className="text-white hover:text-gray-300">Learn</Link>
-        <Link to="/live" className="text-white hover:text-gray-300">Live</Link>
+        <Link to="https://live-classs.vercel.app/" className="text-white hover:text-gray-300">Live</Link>
         <Link to="/discussions" className="text-white hover:text-gray-300">Discussions</Link>
       </div>
 
