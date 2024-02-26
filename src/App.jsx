@@ -4,6 +4,7 @@ import SignUp from './components/SignUp';
 import Login from './components/Login';
 import Home from './components/Home';
 import Cm1 from './components/Cm1';
+import Live from './components/Live';
 import Profile from './components/Profile';
 import Featuredcompf from './components/Featuredcompf';
 import Featuredcyber from './components/Featuredcyber';
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/Featuredcompf' element={<Featuredcompf/>}/>
+        <Route path='/Live' element={<Live />} />
         <Route path='/Featuredcyber' element={<Featuredcyber/>}/>
         <Route path='/cm1' element={<Cm1 />} />
         <Route path='/home' element={<Home />} />
