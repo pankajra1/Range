@@ -8,26 +8,24 @@ import Live from './components/Live';
 import Profile from './components/Profile';
 import Featuredcompf from './components/Featuredcompf';
 import Featuredcyber from './components/Featuredcyber';
-import Footer from './components/Footer';
-import './App.css';
 import Layout from './layout';
+
 function App() {
   return (
     <Router>
-      <Layout>
       <Routes>
-        <Route path='/' element={<Login />} />
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/Featuredcompf' element={<Featuredcompf/>}/>
-        <Route path='/Live' element={<Live />} />
-        <Route path='/Featuredcyber' element={<Featuredcyber/>}/>
-        <Route path='/cm1' element={<Cm1 />} />
-        <Route path='/home' element={<Home />} />
-        <Route path='/Profile' element={<Profile />} />
-                <Route   path='/compf' element={<Cm1 />} />
+        {/* Login and SignUp routes */}
+        <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+
+        {/* Routes with Layout */}
+        <Route path="/home" element={<Layout><Home /></Layout>} />
+        <Route path="/cm1" element={<Layout><Cm1 /></Layout>} />
+        <Route path="/live" element={<Layout><Live /></Layout>} />
+        <Route path="/profile" element={<Layout><Profile /></Layout>} />
+        <Route path="/featuredcompf" element={<Layout><Featuredcompf /></Layout>} />
+        <Route path="/featuredcyber" element={<Layout><Featuredcyber /></Layout>} />
       </Routes>
-      </Layout>
-      <Footer />
     </Router>
   );
 }
