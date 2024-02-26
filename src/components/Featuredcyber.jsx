@@ -22,7 +22,7 @@ function Featured() {
       <div className="container mx-auto mt-8 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Card 1 */}
-          <Link to="/cm">
+          <Link to="/cm1">
             <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden transform transition duration-300 ease-in-out hover:scale-105">
               <img src={course1} alt="Course1" className="w-full h-64 object-cover" />
               <div className="p-4">
@@ -33,7 +33,7 @@ function Featured() {
           </Link>
 
           {/* Card 2 */}
-          <Link to="/cm">
+          <Link to="/cm2">
             <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden transform transition duration-300 ease-in-out hover:scale-105">
               <img src={course2} alt="Course2" className="w-full h-64 object-cover" />
               <div className="p-4">
@@ -44,7 +44,7 @@ function Featured() {
           </Link>
 
           {/* Card 3 */}
-          <Link to="/cm">
+          <Link to="/cm1">
             <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden transform transition duration-300 ease-in-out hover:scale-105">
               <img src={course3} alt="Course3" className="w-full h-64 object-cover" />
               <div className="p-4">
@@ -55,7 +55,7 @@ function Featured() {
           </Link>
 
           {/* Card 4 */}
-          <Link to="/cm">
+          <Link to="/cm1">
             <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden transform transition duration-300 ease-in-out hover:scale-105">
               <img src={Course4} alt="Course4" className="w-full h-64 object-cover" />
               <div className="p-4">
@@ -66,7 +66,7 @@ function Featured() {
           </Link>
 
           {/* Card 5 */}
-          <Link to="/cm">
+          <Link to="/cm1">
             <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden transform transition duration-300 ease-in-out hover:scale-105">
               <img src={course5} alt="Course5" className="w-full h-64 object-cover" />
               <div className="p-4">
@@ -77,7 +77,7 @@ function Featured() {
           </Link>
 
           {/* Card 6 */}
-          <Link to="/cm">
+          <Link to="/cm1">
             <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden transform transition duration-300 ease-in-out hover:scale-105">
               <img src={course6} alt="Course6" className="w-full h-64 object-cover" />
               <div className="p-4">

@@ -1,11 +1,13 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "/src/assets/logo.png";
 import cf from "/src/assets/cf.avif";
 import cybsec from "/src/assets/cybsec.jpg";
 
 function Home() {
-  useEffect(() => {document.title = 'HOME:Learn';}, []);
+  useEffect(() => {
+    document.title = 'HOME:Learn';
+  }, []);
+
   return (
     <div>
       {/* Main Content */}
@@ -21,7 +23,7 @@ function Home() {
           <Link to="/Featuredcompf" className="block">
             <div className="overflow-hidden bg-white shadow-md rounded-md transition duration-300 ease-in-out transform hover:scale-105 group">
               <div className="overflow-hidden">
-                <img src={cf} alt="Computer Fundamentals" className="w-full h-56 object-cover" />
+                <img src={cf} alt="Computer Fundamentals" className="w-full h-60 object-cover" />
               </div>
               <div className="p-4">
                 <h2 className="text-xl font-bold mb-2">Computer Fundamentals</h2>
@@ -34,7 +36,7 @@ function Home() {
           <Link to="/Featuredcyber" className="block">
             <div className="overflow-hidden bg-white shadow-md rounded-md transition duration-300 ease-in-out transform hover:scale-105 group">
               <div className="overflow-hidden">
-                <img src={cybsec} alt="CyberSecurity Fundamentals" className="w-full h-56 object-cover" />
+                <img src={cybsec} alt="CyberSecurity Fundamentals" className="w-full h-60 object-cover" />
               </div>
               <div className="p-4">
                 <h2 className="text-xl font-bold mb-2">CyberSecurity Fundamentals</h2>
