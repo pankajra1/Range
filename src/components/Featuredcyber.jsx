@@ -37,8 +37,8 @@ function Featured() {
             <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden transform transition duration-300 ease-in-out hover:scale-105">
               <img src={course2} alt="Course2" className="w-full h-64 object-cover" />
               <div className="p-4">
-                <h2 className="text-xl font-bold mb-2">Course 2</h2>
-                <p className="text-gray-700">This is the Second course that we want to sell to you</p>
+                <h2 className="text-xl font-bold mb-2">understanding basics</h2>
+                <p className="text-gray-700">The fundamentals of security and nwtworking</p>
               </div>
             </div>
           </Link>
