@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SignUp from './components/SignUp';
 import Login from './components/Login';
 import Home from './components/Home';
+import Footer from './components/Footer'; // Import the Footer component
 import Cm1 from './components/Cm1';
 import Live from './components/Live';
 import Profile from './components/Profile';
@@ -26,6 +27,9 @@ function App() {
         <Route path="/featuredcompf" element={<Layout><Featuredcompf /></Layout>} />
         <Route path="/featuredcyber" element={<Layout><Featuredcyber /></Layout>} />
       </Routes>
+
+      {/* Footer outside the Routes */}
+      <Footer />
     </Router>
   );
 }
