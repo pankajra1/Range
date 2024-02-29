@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="flex space-x-4">
         <Link to="/home" className="text-white hover:text-gray-300">Learn</Link>
         <Link to="/Live" className="text-white hover:text-gray-300">Live</Link>
-        <Link to="/discussions" className="text-white hover:text-gray-300">Discussions</Link>
+        <a href="https://discussion-forum-client-ebon.vercel.app/dashboard" className="text-white hover:text-gray-300">Discussions</a>
       </div>
 
       {/* Dropdown */}
