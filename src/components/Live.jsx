@@ -8,7 +8,7 @@ const HomePage = () => {
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    navigate(`/Liveroom/}`);
+    navigate(`/Liveroom/${classCode}`);
   };
 
   return (
