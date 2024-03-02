@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Footer from './components/Footer'; // Import the Footer component
 import Cm1 from './components/Cm1';
 import Live from './components/Live';
+// import Game1 from './components/game';
 import Profile from './components/Profile';
 import Featuredcompf from './components/Featuredcompf';
 import Featuredcyber from './components/Featuredcyber';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/home" element={<Layout><Home /></Layout>} />
         <Route path="/cm1" element={<Layout><Cm1 /></Layout>} />
         <Route path="/live" element={<Layout><Live /></Layout>} />
+        {/* <Route path="/game1" element={<Layout><Game1 /></Layout>} /> */}
         <Route path="/profile" element={<Layout><Profile /></Layout>} />
         <Route path="/featuredcompf" element={<Layout><Featuredcompf /></Layout>} />
         <Route path="/featuredcyber" element={<Layout><Featuredcyber /></Layout>} />
