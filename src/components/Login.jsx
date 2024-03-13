@@ -4,6 +4,8 @@ import logo from '../assets/logo.png';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import sprinkleSvg from '../assets/Sprinkle.svg';
+import backgroundGif from '../assets/background.gif';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -16,79 +18,53 @@ const Login = () => {
     e.preventDefault();
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
       navigate("/home");
-      console.log(user);
     } catch (error) {
-      const errorMessage = error.message;
-      setErrorMessage(errorMessage);
+      setErrorMessage(error.message);
     }
   };
 
   const togglePasswordVisibility = () => {
-    setShowPassword((prev) => !prev);
+    setShowPassword(!showPassword);
   };
 
   return (
-    <div className="flex bg-slate-200 justify-center items-center w-full h-[100vh]">
-      <div className="left bg-blue-500 w-80 h-[24rem] shadow-md flex items-center justify-center">
-        <img src={logo} alt="" className="w-60" />
+    <div className="login-wrapper flex justify-center items-center w-full h-[100vh]"
+         style={{ backgroundImage: `url(${sprinkleSvg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      {/* Background applied to the entire page */}
+      <div className="left bg-blue-500 w-80 h-[24rem] shadow-md flex items-center justify-center relative z-10 rounded-lg" style={{ backgroundImage: `url(${backgroundGif})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <img src={logo} alt="Logo" className="w-60 z-20 relative" />
       </div>
-      <form>
-        <div className="right bg-white w-80 h-[24rem] shadow-md flex flex-col items-center">
-          <div className="heading text-2xl font-bold mt-10">
-            <p>LOGIN</p>
+
+      <form className="right bg-white w-80 h-[24rem] shadow-md flex flex-col items-center relative z-10 rounded-lg" onSubmit={onLogin}>
+        <div className="heading text-2xl font-bold mt-10">
+          LOGIN
+        </div>
+        <div className="username mt-4">
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="username" required className="border border-black rounded-sm h-8 w-60 p-2" />
+        </div>
+        <div className="password mt-4 relative">
+          <input type={showPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} placeholder="password" required className="border border-black rounded-sm h-8 w-60 p-2 pr-10" />
+          <button type="button" className="absolute right-2 top-2 text-gray-500 cursor-pointer" onClick={togglePasswordVisibility}>
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </button>
+        </div>
+        {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+        <div className="flex justify-between gap-10 mt-4">
+          <div className="forgot flex gap-2">
+            <input type="checkbox" id="remember-me" className="border" />
+            <label htmlFor="remember-me" className="text-blue-500 text-xs">Remember Me</label>
           </div>
-          <div className="username mt-4">
-            <input
-              type="email"
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="username"
-              required
-              className="border border-black rounded-sm h-8 w-60 p-2"
-            />
-          </div>
-          <div className="password mt-4 relative">
-            <input
-              type={showPassword ? "text" : "password"}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="password"
-              required
-              className="border border-black rounded-sm h-8 w-60 p-2 pr-10"
-            />
-            {showPassword ? (
-              <FaEyeSlash className="absolute right-2 top-2 text-gray-500 cursor-pointer" onClick={togglePasswordVisibility} />
-            ) : (
-              <FaEye className="absolute right-2 top-2 text-gray-500 cursor-pointer" onClick={togglePasswordVisibility} />
-            )}
-          </div>
-          {errorMessage && <p className="text-red-500">{errorMessage}</p>}
-          <div className="flex justify-between gap-10 mt-4">
-            <div className="forgot flex gap-2">
-              <input type="checkbox" name="" id="" className="border" />
-              <p className="text-blue-500 text-xs">Remember Me</p>
-            </div>
-            <div className="">
-              <p className="text-blue-500 text-xs">Forgot Password</p>
-            </div>
-          </div>
-          <div className="submit">
-            <button
-              type="submit"
-              onClick={onLogin}
-              className="mt-4 border bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-white hover:border hover:border-blue-500 hover:text-blue-500 "
-            >
-              Login
-            </button>
-          </div>
-          <div className="signUp mt-4">
-            <p className="text-sm">
-              Don't have an account?{' '}
-              <span className="font-medium">
-                <Link to={'/signup'}>Sign up</Link>
-              </span>
-            </p>
-          </div>
+          <Link to="/reset" className="text-blue-500 text-xs">Forgot Password</Link>
+        </div>
+        <button type="submit" className="submit mt-4 border bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-white hover:border hover:border-blue-500 hover:text-blue-500">
+          Login
+        </button>
+        <div className="signUp mt-4">
+          Don't have an account?{' '}
+          <span className="font-medium">
+            <Link to="/signup">Sign up</Link>
+          </span>
         </div>
       </form>
     </div>

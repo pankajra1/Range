@@ -11,13 +11,13 @@ function Home() {
   return (
     <div>
       {/* Main Content */}
-      <div className="text-center mt-10 px-4">
+      <div className="text-center mt-10 mb-20 px-4">
         <h1 className="text-3xl md:text-4xl font-Helvetica">Start your cybersecurity learning</h1>
         <h2 className="text-lg md:text-xl mt-3 font-Arial">Choose your Path from the Courses offered by Cyberpeace foundation</h2>
       </div>
 
       {/* Course Cards */}
-      <div className="container mx-auto mt-8 px-4">
+      <div className="container mx-auto mt-8 mb-20 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           {/* Card 1 */}
           <Link to="/Featuredcompf" className="block">
