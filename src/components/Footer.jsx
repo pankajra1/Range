@@ -3,19 +3,19 @@ import logo from "/src/assets/logo.png";
 export default function App() {
   return (
     <footer
-      className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left mt-20">
+      className="bg-blue-400 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left mt-20  w-full border-r-2">
       <div
         className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
-        <div className="mr-12 hidden lg:block">
+        <div className="mr-12 hidden text-black text-[500] lg:block">
           <span>Connect with cyberpeace here:</span>
         </div>
         {/* <!-- Social network icons container --> */}
         {/* facebook link */}
         <div className="flex justify-center">
-          <a href="https://www.facebook.com/cyberpeacefoundation/" className="mr-6 text-neutral-600 dark:text-neutral-200">
+          <a href="https://www.facebook.com/cyberpeacefoundation/" className="mr-6  text-black dark:text-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              className="h-6 w-6"
               fill="currentColor"
               viewBox="0 0 24 24">
               <path
@@ -23,10 +23,10 @@ export default function App() {
             </svg>
           </a>
           {/* twitter link */}
-          <a href="https://twitter.com/cyberpeacengo" className="mr-6 text-neutral-600 dark:text-neutral-200">
+          <a href="https://twitter.com/cyberpeacengo" className="mr-6  text-black dark:text-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              className="h-6 w-6"
               fill="currentColor"
               viewBox="0 0 24 24">
               <path
@@ -47,10 +47,10 @@ export default function App() {
             </svg>
           </a> */}
           {/* instagram link */}
-          <a href="https://www.instagram.com/cyberpeacefoundation/"className="mr-6 text-neutral-600 dark:text-neutral-200">
+          <a href="https://www.instagram.com/cyberpeacefoundation/"className="mr-6 text-black  dark:text-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              className="h-6 w-6"
               fill="currentColor"
               viewBox="0 0 24 24">
               <path
@@ -58,10 +58,10 @@ export default function App() {
             </svg>
           </a>
           {/* linkedin link */}
-          <a href="https://in.linkedin.com/company/cyberpeacefoundation"className="mr-6 text-neutral-600 dark:text-neutral-200">
+          <a href="https://in.linkedin.com/company/cyberpeacefoundation"className="mr-6  text-black dark:text-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              className="h-6 w-6"
               fill="currentColor"
               viewBox="0 0 24 24">
               <path
@@ -205,10 +205,10 @@ export default function App() {
       {/* </div> */}
 
       {/* <!--Copyright section--> */}
-      <div className="bg-neutral-200 p-6 text-center dark:bg-neutral-700">
+      <div className="bg-blue-700 p-6 text-black font-[550] text-center dark:bg-neutral-700">
         <span>© 2024 Copyright: </span>
         <a
-          className="font-semibold text-neutral-600 dark:text-neutral-400"
+          className="font-semibold text-black  dark:text-neutral-400"
           href="https://www.cyberpeace.org/"
         >CyberPeace Foundation</a>
       </div>
