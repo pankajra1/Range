@@ -13,7 +13,7 @@ const LivePage = () => {
       serverSecret,
       roomId,
       Date.now().toString(),
-      "Roshnee"
+      "Your Name"
     );
     const zp = ZegoUIKitPrebuilt.create(kitToken);
     zp.joinRoom({
@@ -33,7 +33,7 @@ const LivePage = () => {
 
   return (
     <div className="LivePage">
-      <div ref={live} />
+      <div ref={liveClass} />
     </div>
   );
 };
