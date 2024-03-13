@@ -237,9 +237,10 @@ const Cm1 = () => {
         • These tools securely generate and store complex, unique passwords for each of your accounts.<br />
         • You only need to remember one master password to access them all.
       </p>
+      
       <p className="text-gray-600 mb-4">
         <span className="font-bold">Activity: Password Strength Test</span><br />
-        Use this website: <a href="https://howsecureismypassword.net/" className="text-blue-600 hover:underline">https://howsecureismypassword.net/</a><br />
+        Use this website: <a href="https://www.security.org/how-secure-is-my-password/" className="text-blue-600 hover:underline">https://howsecureismypassword.net/</a><br />
         Instructions for Students:<br />
         Try a password you currently use. Does the site say it would be easy to crack?<br />
         Now try a longer passphrase (think silly sentence with odd capitalization). See how much more secure that is!
