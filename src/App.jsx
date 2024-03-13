@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Footer from './components/Footer'; // Import the Footer component
 import Cm1 from './components/Cm1';
 import Live from './components/Live';
+// import Game1 from './components/game';
 import Profile from './components/Profile';
 import Featuredcompf from './components/Featuredcompf';
 import Featuredcyber from './components/Featuredcyber';
@@ -21,7 +22,6 @@ function App() {
         {/* Login and SignUp routes */}
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-
         {/* Routes with Layout */}
         <Route path="/home" element={<Layout><Home /></Layout>} />
         <Route path="/cm1" element={<Layout><Cm1 /></Layout>} />

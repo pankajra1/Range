@@ -109,7 +109,7 @@ const Cm1 = () => {
         {activeModule === 'Course plan' && (
           <div>
             <p mb-20>This is a video to demonstrate the various capabilities of the course plan and the integration of items inside it</p>
-            <YouTube videoId="SU9DYXjhe6E" />
+            <YouTube videoId="L1M7uxZ95t4" />
           </div>
         )}
         {activeModule === 'History' && (
