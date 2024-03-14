@@ -6,8 +6,17 @@ import course3 from "/src/assets/course3.png";
 import Course4 from "/src/assets/course4.png";
 import course5 from "/src/assets/course5.png";
 import course6 from "/src/assets/course6.png";
-function Featuredcompf() {
-  useEffect(() => {document.title = 'Computer Fundamentals';}, []);
+import '../index.css';
+
+  function Featuredcompf() {
+    useEffect(() => {
+      document.title = 'Computer Fundamentals';
+      const originalBackground = document.body.className;
+      document.body.className = 'bg-gradient-animation';
+      return () => {
+        document.body.className = originalBackground;
+      };
+    }, []);
   return (
     <div>
       {/* Main Content */}

@@ -2,22 +2,15 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import cf from "/src/assets/cf.avif";
 import cybsec from "/src/assets/cybsec.jpg";
-import homebg from "/src/assets/homebg.svg"
+import '../index.css';
+
 function Home() {
   useEffect(() => {
-    // Set the page's title
     document.title = 'HOME:Learn';
-
-    // Store the original background to revert back to it when leaving this component
-    const originalBackground = document.body.style.background;
-
-    // Set the new background with the GIF
-    document.body.style.background = `url(${homebg}) no-repeat center center fixed`;
-    document.body.style.backgroundSize = 'cover';
-
-    // Cleanup function to revert the background when the component is unmounted
+    const originalBackground = document.body.className;
+    document.body.className = 'bg-gradient-animation';
     return () => {
-      document.body.style.background = originalBackground;
+      document.body.className = originalBackground;
     };
   }, []);
 

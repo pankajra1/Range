@@ -6,9 +6,17 @@ import course3 from "/src/assets/course3.png";
 import Course4 from "/src/assets/course4.png";
 import course5 from "/src/assets/course5.png";
 import course6 from "/src/assets/course6.png";
+import '../index.css';
 
-function Featured() {
-  useEffect(() => {document.title = 'Cyber Fundamentals';}, []);
+  function Featured() {
+    useEffect(() => {
+      document.title = 'Cyber Fundamentals';
+      const originalBackground = document.body.className;
+      document.body.className = 'bg-gradient-animation';
+      return () => {
+        document.body.className = originalBackground;
+      };
+    }, []);
   return (
     <div>
       {/* Main Content */}
@@ -38,7 +46,7 @@ function Featured() {
               <img src={course2} alt="Course2" className="w-full h-64 object-cover" />
               <div className="p-4">
                 <h2 className="text-xl font-bold mb-2">understanding basics</h2>
-                <p className="text-gray-700">The fundamentals of security and nwtworking</p>
+                <p className="text-gray-700">The fundamentals of security and networking</p>
               </div>
             </div>
           </Link>
