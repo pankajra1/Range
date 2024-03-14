@@ -66,7 +66,7 @@ const SignUp = () => {
   return (
     <div className="flex bg-slate-200 justify-center items-center w-full h-[100vh]"
     style={{ backgroundImage: `url(${sprinkleSvg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <div className="left bg-blue-500 w-80 h-[24rem] shadow-md flex items-center justify-center relative z-10 rounded-lg" style={{ backgroundImage: `url(${backgroundGif})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="left bg-blue-500 w-80 h-[24rem] shadow-md flex items-center justify-center relative z-10 rounded-lg" >
        <img src={logo} alt="Logo" className="w-60 z-20 relative" />
       </div>
 

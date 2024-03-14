@@ -2,19 +2,51 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import cf from "/src/assets/cf.avif";
 import cybsec from "/src/assets/cybsec.jpg";
-
+import homebg from "/src/assets/homebg.svg"
 function Home() {
   useEffect(() => {
+    // Set the page's title
     document.title = 'HOME:Learn';
+
+    // Store the original background to revert back to it when leaving this component
+    const originalBackground = document.body.style.background;
+
+    // Set the new background with the GIF
+    document.body.style.background = `url(${homebg}) no-repeat center center fixed`;
+    document.body.style.backgroundSize = 'cover';
+
+    // Cleanup function to revert the background when the component is unmounted
+    return () => {
+      document.body.style.background = originalBackground;
+    };
   }, []);
 
+
   return (
-    <div>
-      {/* Main Content */}
-      <div className="text-center mt-10 mb-20 px-4">
-        <h1 className="text-3xl md:text-4xl font-Helvetica">Start your cybersecurity learning</h1>
-        <h2 className="text-lg md:text-xl mt-3 font-Arial">Choose your Path from the Courses offered by Cyberpeace foundation</h2>
-      </div>
+    <div style={{ position: "relative", width: "100%", height: "100vh" }}>
+    <div className="text-center mt-10 mb-10 px-4">
+       <h1 className="text-3xl md:text-4xl font-bold font-Helvetica">Start your cybersecurity learning</h1>
+       <h2 className="text-lg md:text-xl mt-3 font-bold font-Arial">Choose your Path from the Courses offered by Cyberpeace foundation</h2>
+    </div>
+      {/* Embed the Giphy iframe as the background
+      <div
+        style={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          zIndex: -1, // Ensures the content goes over the background
+        }}
+      >
+        <iframe
+          src="https://giphy.com/embed/wUFtlQj19K9Wg"
+          width="100%"
+          height="100%"
+          style={{ position: "absolute" }}
+          frameBorder="0"
+          className="giphy-embed"
+          allowFullScreen
+        ></iframe>
+      </div> */}
 
       {/* Course Cards */}
       <div className="container mx-auto mt-8 mb-20 px-4">
