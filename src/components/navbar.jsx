@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="flex space-x-4">
         <Link to="/home" className="text-white hover:text-gray-300">Learn</Link>
         <Link to="/Live" className="text-white hover:text-gray-300">Live</Link>
-        {/* <Link to="/Post" className="text-white hover:text-gray-300">Discussion</Link> */}
+        <Link to="/cm1" className="text-white hover:text-gray-300">Pipe</Link>
         <Link to="/dashboard" className="text-white hover:text-gray-300">Discussion</Link>
         
       </div>
@@ -47,13 +47,17 @@ const Navbar = () => {
         </button>
         {dropdownOpen && (
           <div
-            ref={dropdownRef}
-            className="absolute bg-white mt-2 p-2 rounded shadow"
-            style={{ right: dropdownRef.current && dropdownRef.current.offsetWidth > 200 ? 'auto' : '0' }}
-          >
-            <Link to="/profile" className="block text-gray-800 hover:bg-gray-200 py-1 px-4">Profile</Link>
-            <Link to="/" className="block text-gray-800 hover:bg-gray-200 py-1 px-4">Sign Out</Link>
-          </div>
+          ref={dropdownRef}
+          className="absolute bg-white mt-2 p-2 rounded shadow"
+          style={{
+            right: dropdownRef.current && dropdownRef.current.offsetWidth > 200 ? 'auto' : '0',
+            minWidth: '150px', // Ensures the dropdown is wide enough
+          }}
+        >
+          <Link to="/profile" className="block text-gray-800 hover:bg-gray-200 py-1 px-4 whitespace-nowrap">Profile</Link>
+          <Link to="/" className="block text-gray-800 hover:bg-gray-200 py-1 px-4 whitespace-nowrap">Sign Out</Link>
+        </div>
+        
         )}
       </div>
     </nav>
