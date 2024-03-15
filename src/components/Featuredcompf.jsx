@@ -22,8 +22,18 @@ import '../index.css';
       {/* Main Content */}
       <div>
         <center>
-          <h1 className="text-5xl mt-10 font-Helvetica font-bold text-customPurple">Computer Fundamentals</h1>
-          <h2 className="text-2xl mt-5 font-Helvetica">Featured Courses</h2>
+        <h1 
+          className="text-5xl mt-10 font-Helvetica font-bold text-customPurple"
+          style={{ textShadow: '0 0 10px #FAF, 0 0 20px #FAF, 0 0 30px #FAF, 0 0 40px #FAF' }}
+        >
+          Computer Fundamentals
+        </h1>
+        <h2 
+          className="text-2xl mt-5 font-Helvetica"
+          style={{ textShadow: '0 0 8px #FAF, 0 0 16px #FAF' }}
+        >
+          Featured Courses
+        </h2>
         </center>
       </div>
 
