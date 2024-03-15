@@ -28,7 +28,7 @@ const Navbar = () => {
     <nav className="bg-gray-800 p-4 flex justify-between items-center">
       {/* Logo */}
       <Link to="/home">
-        <img src={logo} alt="Logo" className="h-8" />
+        <img src={logo} alt="Logo" className="h-10" />
       </Link>
 
       {/* Navigation Links */}
