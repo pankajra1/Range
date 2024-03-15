@@ -11,7 +11,7 @@ export default function App() {
 
       {/* Right side: Connect with us section */}
       <div className="flex items-center">
-        <span className="hidden lg:inline mr-4 text-black dark:text-neutral-200">Connect with cyberpeace here:</span>
+        {/* <span className="hidden lg:inline mr-4 text-black dark:text-neutral-200">Connect with cyberpeace here:</span> */}
         {/* Facebook link */}
         <a href="https://www.facebook.com/cyberpeacefoundation/" className="mr-6 text-black dark:text-neutral-200">
           {/* Facebook SVG icon */}
