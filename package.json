@@ -10,13 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "blueimp-load-image": "^5.16.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "blueimp-load-image": "^5.16.0",
     "firebase": "^10.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fontawesome": "^1.7.1",
     "react-icon": "^1.0.0",
     "react-icons": "^5.0.1",
     "react-router-dom": "^6.22.0",

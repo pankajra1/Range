@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '/src/assets/logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Corrected import path
+import { faGripLinesVertical } from '@fortawesome/free-solid-svg-icons'; // Changed from 'faPipe' as 'faPipe' might not exist. Adjust if you have a specific icon in mind.
 import dropdownIcon from '/src/assets/dropdown.png';
 
 const Navbar = () => {
@@ -34,12 +36,11 @@ const Navbar = () => {
       {/* Navigation Links */}
       <div className="flex items-center space-x-4">
         <Link to="/home" className="text-white hover:text-gray-300">Learn</Link>
-        <span className="text-white">|</span>
+        <FontAwesomeIcon icon={faGripLinesVertical} className="text-white mx-2" /> {/* Adjusted for proper spacing */}
         <Link to="/Live" className="text-white hover:text-gray-300">Live</Link>
-        <span className="text-white">|</span>
+        <FontAwesomeIcon icon={faGripLinesVertical} className="text-white mx-2" /> {/* Adjusted for proper spacing */}
         <Link to="/dashboard" className="text-white hover:text-gray-300">Discussion</Link>
       </div>
-
 
       {/* Dropdown */}
       <div className="relative">
@@ -48,17 +49,16 @@ const Navbar = () => {
         </button>
         {dropdownOpen && (
           <div
-          ref={dropdownRef}
-          className="absolute bg-white mt-2 p-2 rounded shadow"
-          style={{
-            right: dropdownRef.current && dropdownRef.current.offsetWidth > 200 ? 'auto' : '0',
-            minWidth: '150px', // Ensures the dropdown is wide enough
-          }}
-        >
-          <Link to="/profile" className="block text-gray-800 hover:bg-gray-200 py-1 px-4 whitespace-nowrap">Profile</Link>
-          <Link to="/" className="block text-gray-800 hover:bg-gray-200 py-1 px-4 whitespace-nowrap">Sign Out</Link>
-        </div>
-        
+            ref={dropdownRef}
+            className="absolute bg-white mt-2 p-2 rounded shadow"
+            style={{
+              right: dropdownRef.current && dropdownRef.current.offsetWidth > 200 ? 'auto' : '0',
+              minWidth: '150px', // Ensures the dropdown is wide enough
+            }}
+          >
+            <Link to="/profile" className="block text-gray-800 hover:bg-gray-200 py-1 px-4 whitespace-nowrap">Profile</Link>
+            <Link to="/" className="block text-gray-800 hover:bg-gray-200 py-1 px-4 whitespace-nowrap">Sign Out</Link>
+          </div>
         )}
       </div>
     </nav>
