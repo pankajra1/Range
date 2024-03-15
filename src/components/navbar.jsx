@@ -32,13 +32,14 @@ const Navbar = () => {
       </Link>
 
       {/* Navigation Links */}
-      <div className="flex space-x-4">
+      <div className="flex items-center space-x-4">
         <Link to="/home" className="text-white hover:text-gray-300">Learn</Link>
+        <span className="text-white">|</span>
         <Link to="/Live" className="text-white hover:text-gray-300">Live</Link>
-        <Link to="/cm1" className="text-white hover:text-gray-300">Pipe</Link>
+        <span className="text-white">|</span>
         <Link to="/dashboard" className="text-white hover:text-gray-300">Discussion</Link>
-        
       </div>
+
 
       {/* Dropdown */}
       <div className="relative">
