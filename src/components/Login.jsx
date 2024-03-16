@@ -5,7 +5,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import sprinkleSvg from '../assets/Sprinkle.svg';
-import wbackGif from '../assets/wback.gif';
+// import wbackGif from '../assets/wback.gif';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const Login = () => {
   return (
     <div className="login-wrapper flex justify-center items-center w-full h-[100vh]"
          style={{ backgroundImage: `url(${sprinkleSvg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <img src={wbackGif} alt="Character Animation" style={{ width: '400px', position: 'absolute', bottom: '0px', left: '0px' }} /> 
+        {/* <img src={wbackGif} alt="Character Animation" style={{ width: '400px', position: 'absolute', bottom: '0px', left: '0px' }} />  */}
       {/* Background applied to the entire page */}
       <div className="left bg-blue-500 w-80 h-[24rem] shadow-md flex items-center justify-center relative z-10 rounded-lg">
         <img src={logo} alt="Logo" className="w-60 z-20 relative" />
