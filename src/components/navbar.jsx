@@ -36,10 +36,10 @@ const Navbar = () => {
       {/* Navigation Links */}
       <div className="flex items-center space-x-4">
         <Link to="/home" className="text-white hover:text-gray-300">Learn</Link>
-        <FontAwesomeIcon icon={faGripLinesVertical} className="text-white mx-2" /> {/* Adjusted for proper spacing */}
+        {/* <FontAwesomeIcon icon={faGripLinesVertical} className="text-white mx-2" /> Adjusted for proper spacing */}
         <Link to="/Live" className="text-white hover:text-gray-300">Live</Link>
-        <FontAwesomeIcon icon={faGripLinesVertical} className="text-white mx-2" /> {/* Adjusted for proper spacing */}
-        <Link to="/dashboard" className="text-white hover:text-gray-300">Discussion</Link>
+        {/* <FontAwesomeIcon icon={faGripLinesVertical} className="text-white mx-2" /> Adjusted for proper spacing */}
+        <Link to="/discussion" className="text-white hover:text-gray-300">Discussion</Link>
       </div>
 
       {/* Dropdown */}

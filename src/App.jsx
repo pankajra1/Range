@@ -12,6 +12,7 @@ import Layout from './layout';
 import PostQuestion from './components/PostQuestion';
 import Dashboard from './components/Dashboard';
 import QuestionDetail from './components/QuestionDetail';
+import LivePage from './components/Liveroom';
 
 function App() {
   return (
@@ -24,8 +25,9 @@ function App() {
         <Route path="/home" element={<Layout><Home /></Layout>} />
         <Route path="/cm1" element={<Layout><Cm1 /></Layout>} />
         <Route path="/live" element={<Layout><Live /></Layout>} />
+        <Route path="/Liveroom/:roomId" element={<Layout><LivePage /></Layout>} />
         <Route path="/Post" element={<Layout><PostQuestion /></Layout>} />
-        <Route path="/dashboard" element={<Layout><Dashboard /></Layout>} />
+        <Route path="/discussion" element={<Layout><Dashboard /></Layout>} />
         <Route path="/question/:id" element={<Layout><QuestionDetail /></Layout>} />
         <Route path="/profile" element={<Layout><Profile /></Layout>} />
         <Route path="/featuredcompf" element={<Layout><Featuredcompf /></Layout>} />

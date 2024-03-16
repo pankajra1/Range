@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useParams } from "react-router-dom";
 import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
 
@@ -13,7 +13,7 @@ const LivePage = () => {
       serverSecret,
       roomId,
       Date.now().toString(),
-      "Your Name"
+      "Your name"
     );
     const zp = ZegoUIKitPrebuilt.create(kitToken);
     zp.joinRoom({
@@ -30,6 +30,15 @@ const LivePage = () => {
       },
     });
   };
+
+  useEffect(() => {
+    document.title = 'HOME:Learn';
+    const originalBackground = document.body.className;
+    document.body.className = 'bg-gradient-animation';
+    return () => {
+      document.body.className = originalBackground;
+    };
+  }, []);
 
   return (
     <div className="LivePage">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "/src/assets/logo.png";
 
@@ -11,21 +11,31 @@ const HomePage = () => {
     navigate(`/Liveroom/${classCode}`);
   };
 
+  useEffect(() => {
+    document.title = 'HOME:Learn';
+    const originalBackground = document.body.className;
+    document.body.className = 'bg-gradient-animation';
+    return () => {
+      document.body.className = originalBackground;
+    };
+  }, []);
+
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="text-center">
-        <img src={logo} className="w-32 mx-auto mb-8" alt="logo" />
-        <form onSubmit={handleSubmit} className="max-w-xs mx-50">
-          <label className="block mb-4 text-xl font-bold">Enter the class code</label>
+    <div className="flex justify-center items-center">
+      <div className="text-center h-80 mt-14">
+        <img src={logo} className="w-48 mx-auto mb-4 mt-8" alt="logo" />
+        <form onSubmit={handleSubmit} className="max-w-xs mx-4">
+          <label className="block mb-8 text-[27px] font-bold text-black "
+          >Enter the class code</label>
           <input
-            className="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+            className="w-full px-6 py-2 mb-8 border border-blue-300 rounded-md focus:outline-none focus:border-blue-500 shadow-md"
             value={classCode}
             onChange={(e) => setClassCode(e.target.value)}
             type="text"
             required
-            placeholder="Enter the class code"
+            placeholder="Enter the class code.."
           />
-          <button className="w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600" type="submit">
+          <button className="w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transform transition-transform hover:scale-105" type="submit">
             Enter Room
           </button>
         </form>
