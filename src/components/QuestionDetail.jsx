@@ -17,6 +17,7 @@ function QuestionDetail() {
   const [downvoted, setDownvoted] = useState(false);
   const [replies, setReplies] = useState([]);
 
+
   useEffect(() => {
     const unsubscribe = onSnapshot(doc(firestore, 'questions', id), (doc) => {
       if (doc.exists()) {
@@ -212,8 +213,8 @@ function QuestionDetail() {
           </div>
         ))}
       </div>
-      <Link to="/dashboard" className="text-blue-500 hover:underline ml-4">
-        Back to Dashboard
+      <Link to="/discussion" className="text-blue-500 hover:underline ml-4">
+        Back to Discussion Dashboard
       </Link>
     </div>
   );

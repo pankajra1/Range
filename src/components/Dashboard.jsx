@@ -11,6 +11,15 @@ function Dashboard() {
   });
 
   useEffect(() => {
+    document.title = 'HOME:Learn';
+    const originalBackground = document.body.className;
+    document.body.className = 'bg-gradient-animation';
+    return () => {
+      document.body.className = originalBackground;
+    };
+  }, []);
+
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const querySnapshot = await getDocs(collection(firestore, "questions"));

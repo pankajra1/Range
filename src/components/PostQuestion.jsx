@@ -1,5 +1,5 @@
 // components/PostQuestion.js
-import React, { useState } from 'react';
+import React, { useState ,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { firestore } from '../firebase';
@@ -28,6 +28,7 @@ function PostQuestion() { // Receive userId and userName as props
     }
   };
 
+
   return (
     <div className="max-w-md mx-auto mt-8">
       <h2 className="text-lg font-semibold mb-4">Post a Question</h2>
@@ -54,7 +55,7 @@ function PostQuestion() { // Receive userId and userName as props
         />
         <button type="submit" className="w-full bg-blue-500 text-white rounded py-2 px-4 hover:bg-blue-600 transition duration-300">Post</button>
       </form>
-      <Link to="/dashboard" className="block text-blue-500 mt-4">Back to Dashboard</Link>
+      <Link to="/discussion" className="block text-blue-500 mt-4">Back to Discussion Dashboard</Link>
     </div>
   );
 }
