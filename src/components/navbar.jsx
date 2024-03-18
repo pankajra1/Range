@@ -1,19 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '/src/assets/logo.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Corrected import path
-import { faGripLinesVertical } from '@fortawesome/free-solid-svg-icons'; // Changed from 'faPipe' as 'faPipe' might not exist. Adjust if you have a specific icon in mind.
-import dropdownIcon from '/src/assets/dropdown.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGripLinesVertical, faUser } from '@fortawesome/free-solid-svg-icons'; // Added faUser for the profile icon.
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [userEmail, setUserEmail] = useState('');
   const dropdownRef = useRef(null);
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
-
   useEffect(() => {
+    setUserEmail(sessionStorage.getItem('userEmail') || ''); // Retrieve the email from session storage.
+
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setDropdownOpen(false);
@@ -24,28 +22,33 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [dropdownRef]);
+  }, []); // Removed dropdownRef from dependencies to avoid unnecessary rebinds
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
 
   return (
     <nav className="bg-gray-800 p-4 flex justify-between items-center">
       {/* Logo */}
       <Link to="/home">
-        <img src={logo} alt="Logo" className="h-10" />
+        <img src={logo} alt="Logo" className="h-14" />
       </Link>
 
       {/* Navigation Links */}
       <div className="flex items-center space-x-4">
-        <Link to="/home" className="text-white hover:text-gray-300">Learn</Link>
-        {/* <FontAwesomeIcon icon={faGripLinesVertical} className="text-white mx-2" /> Adjusted for proper spacing */}
-        <Link to="/Live" className="text-white hover:text-gray-300">Live</Link>
-        {/* <FontAwesomeIcon icon={faGripLinesVertical} className="text-white mx-2" /> Adjusted for proper spacing */}
-        <Link to="/discussion" className="text-white hover:text-gray-300">Discussion</Link>
+        <Link to="/home" className="text-white font-bold text-2xl hover:text-gray-300">Learn</Link>
+        <span className="text-white mx-2">|</span>
+        <Link to="/Live" className="text-white font-bold text-2xl hover:text-gray-300">Live</Link>
+        <span className="text-white mx-2">|</span>
+        <Link to="/discussion" className="text-white font-bold text-2xl hover:text-gray-300">Discussion</Link>
       </div>
 
       {/* Dropdown */}
       <div className="relative">
-        <button onClick={toggleDropdown} className="text-white hover:text-gray-300">
-          <img src={dropdownIcon} alt="Dropdown" className="h-6" />
+        <button onClick={toggleDropdown} className="text-white hover:text-gray-300 flex items-center">
+          <FontAwesomeIcon icon={faUser} className="h-6 mr-2" /> {/* Profile icon */}
+          <span>{userEmail}</span> {/* Displaying user email */}
         </button>
         {dropdownOpen && (
           <div
@@ -53,7 +56,7 @@ const Navbar = () => {
             className="absolute bg-white mt-2 p-2 rounded shadow"
             style={{
               right: dropdownRef.current && dropdownRef.current.offsetWidth > 200 ? 'auto' : '0',
-              minWidth: '150px', // Ensures the dropdown is wide enough
+              minWidth: '150px',
             }}
           >
             <Link to="/profile" className="block text-gray-800 hover:bg-gray-200 py-1 px-4 whitespace-nowrap">Profile</Link>

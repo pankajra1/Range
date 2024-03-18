@@ -18,11 +18,13 @@ const Login = () => {
     e.preventDefault();
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      // Store the email in session storage
+      sessionStorage.setItem('userEmail', email);
       navigate("/home");
     } catch (error) {
       setErrorMessage(error.message);
     }
-  };
+};
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
