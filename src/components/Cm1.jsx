@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
+import shell from "../assets/shell.png";
 
 
 const QuestionCard = ({ question, options, correctAnswer }) => {
@@ -88,6 +89,12 @@ const Cm1 = () => {
           onClick={() => handleModuleClick("Assessment")}
         >
           Assessment
+        </div>
+        <div
+          className={`bg-white border-blue-500 border-2 w-40 h-10 mb-6  rounded-md justify-center items-center flex font-medium hover:bg-blue-500 hover:text-white hover:transition cursor-pointer transform transition-transform hover:scale-105`}
+          onClick={() => handleModuleClick("Linux testing")}
+        >
+          Linux testing
         </div>
       </div>
       <div class=" w-0  bg-black"></div>
@@ -565,6 +572,19 @@ const Cm1 = () => {
               correctAnswer="B. Ignore the text. It's probably fake."
               explanation="B. Correct: This is the safest way to check, without using any links from the suspicious message."
             />
+          </div>
+        )}
+        {activeModule === "Linux testing" && (
+          <div>
+            <h2 className="text-[23px] font-semibold mb-4 text-blue-600 hover:text-blue-900 text-center">
+              Linux Testing
+            </h2>
+            <p className="text-black text-left font-[500] text-[17px]">
+              You can try your Linux skills here. {/* You can expand this section with more information or interactive components as needed. */}
+            </p>
+            <div className="mt-4">
+              <img src={shell} alt="Linux Testing" className="mx-auto"/>
+             </div>
           </div>
         )}
       </div>
