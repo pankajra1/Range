@@ -94,7 +94,7 @@ import '../index.css';
 
           {/* Card 6 */}
           <Link to="/cm">
-            <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden transform transition duration-300 hover:scale-105">
+            <div className="max-w-md bg-white shadow-md mb-20 rounded-md overflow-hidden transform transition duration-300 hover:scale-105">
               <img src={course6} alt="Course6" className="w-full h-64 object-cover" />
               <div className="p-4">
                 <h2 className="text-xl font-bold mb-2">Course 6</h2>

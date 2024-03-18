@@ -1,5 +1,3 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SignUp from './components/SignUp';
 import Login from './components/Login';
 import Home from './components/Home';
@@ -13,8 +11,28 @@ import PostQuestion from './components/PostQuestion';
 import Dashboard from './components/Dashboard';
 import QuestionDetail from './components/QuestionDetail';
 import LivePage from './components/Liveroom';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from './firebase';
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in
+        setCurrentUser(user);
+      } else {
+        // User is signed out
+        setCurrentUser(null);
+      }
+    });
+
+    // Cleanup subscription on unmount
+    return () => unsubscribe();
+  }, []);
   return (
     <Router>
       <Routes>
