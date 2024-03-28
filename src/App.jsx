@@ -2,6 +2,7 @@ import SignUp from './components/SignUp';
 import Login from './components/Login';
 import Home from './components/Home';
 import Cm1 from './components/Cm1';
+import Test from './components/testpage';
 import Live from './components/Live';
 import Profile from './components/Profile';
 import Featuredcompf from './components/Featuredcompf';
@@ -39,6 +40,7 @@ function App() {
         {/* Login and SignUp routes */}
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/Test" element={<Test />} />
         {/* Routes with Layout */}
         <Route path="/home" element={<Layout><Home /></Layout>} />
         <Route path="/cm1" element={<Layout><Cm1 /></Layout>} />

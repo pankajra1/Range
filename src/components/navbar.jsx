@@ -10,7 +10,7 @@ const Navbar = () => {
   const dropdownRef = useRef(null);
 
   useEffect(() => {
-    setUserEmail(sessionStorage.getItem('userEmail') || ''); // Retrieve the email from session storage.
+    setUserEmail(sessionStorage.getItem('userEmail') || '');
 
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -22,33 +22,33 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []); // Removed dropdownRef from dependencies to avoid unnecessary rebinds
+  }, []);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
   return (
-    <nav className="bg-gray-800 p-4 flex justify-between items-center">
+    <nav className="bg-gray-800 p-4 flex flex-col lg:flex-row lg:justify-between lg:items-center">
       {/* Logo */}
       <Link to="/home">
-        <img src={logo} alt="Logo" className="h-14" />
+        <img src={logo} alt="Logo" className="h-14 mb-4 lg:mb-0 lg:mr-4" />
       </Link>
 
       {/* Navigation Links */}
-      <div className="flex items-center space-x-4">
-        <Link to="/home" className="text-white font-bold text-2xl hover:text-gray-300">Learn</Link>
-        <span className="text-white mx-2">|</span>
-        <Link to="/Live" className="text-white font-bold text-2xl hover:text-gray-300">Live</Link>
-        <span className="text-white mx-2">|</span>
-        <Link to="/discussion" className="text-white font-bold text-2xl hover:text-gray-300">Discussion</Link>
+      <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-4">
+        <Link to="/home" className="text-white font-bold text-xl lg:text-2xl hover:text-gray-300">Learn</Link>
+        <span className="text-white mx-2 hidden lg:inline">|</span>
+        <Link to="/Live" className="text-white font-bold text-xl lg:text-2xl hover:text-gray-300">Live</Link>
+        <span className="text-white mx-2 hidden lg:inline">|</span>
+        <Link to="/discussion" className="text-white font-bold text-xl lg:text-2xl hover:text-gray-300">Discussion</Link>
       </div>
 
       {/* Dropdown */}
-      <div className="relative">
+      <div className="relative mt-4 lg:mt-0">
         <button onClick={toggleDropdown} className="text-white hover:text-gray-300 flex items-center">
-          <FontAwesomeIcon icon={faUser} className="h-6 mr-2" /> {/* Profile icon */}
-          <span>{userEmail}</span> {/* Displaying user email */}
+          <FontAwesomeIcon icon={faUser} className="h-6 mr-2" />
+          <span>{userEmail}</span>
         </button>
         {dropdownOpen && (
           <div
