@@ -44,7 +44,7 @@ const Cm1 = () => {
       )}
 
       {/* Content Dash */}
-      <div className={`lg:w-1/4 flex flex-col gap-4 mr-6 items-center h-fit mt-12 rounded-2xl border-gray-200 p-4 bg-blue-100 ${!isMobile || showToggleSidebar ? 'block' : 'hidden'} ${isMobile ? 'absolute top-6 left-0 w-full h-full z-20' : 'relative'} ${!isTablet || showToggleSidebar ? 'block' : 'hidden'} ${isTablet ? 'absolute mb-7 left-0 h-full z-20' : 'relative'}`}>
+      <div className={`lg:w-1/4 flex flex-col gap-4 mr-6 items-center h-full mt-12 rounded-2xl border-gray-200 p-4 bg-blue-100 ${!isMobile || showToggleSidebar ? 'block' : 'hidden'} ${isMobile ? 'absolute top-6 left-0 w-full h-full z-20' : 'relative'} ${!isTablet || showToggleSidebar ? 'block' : 'hidden'} ${isTablet ? 'absolute mb-7 left-0 h-full z-20' : 'relative'}`}>
         <div
           className={`bg-white border-blue-500 border-2 w-40 h-10 mb-6 mt-2  rounded-md justify-center items-center flex font-medium hover:bg-blue-500 hover:text-white hover:transition cursor-pointer transform transition-transform hover:scale-105`}
           onClick={() => handleModuleClick("Introduction")}
