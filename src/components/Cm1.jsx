@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
-import shell from "../assets/shell.png";
+import LinuxTesting from "./linuxtesting";
 
 
 const QuestionCard = ({ question, options, correctAnswer }) => {
@@ -575,17 +575,7 @@ const Cm1 = () => {
           </div>
         )}
         {activeModule === "Linux testing" && (
-          <div>
-            <h2 className="text-[23px] font-semibold mb-4 text-blue-600 hover:text-blue-900 text-center">
-              Linux Testing
-            </h2>
-            <p className="text-black text-left font-[500] text-[17px]">
-              You can try your Linux skills here. {/* You can expand this section with more information or interactive components as needed. */}
-            </p>
-            <div className="mt-4">
-              <img src={shell} alt="Linux Testing" className="mx-auto"/>
-             </div>
-          </div>
+          <LinuxTesting />
         )}
       </div>
     </div>
