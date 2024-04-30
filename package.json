@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^2.2.4",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -17,6 +18,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.15.14",
     "@zegocloud/zego-uikit-prebuilt": "^2.0.0",
+    "axios": "^1.6.8",
     "blueimp-load-image": "^5.16.0",
     "firebase": "^10.11.0",
     "react": "^18.2.0",

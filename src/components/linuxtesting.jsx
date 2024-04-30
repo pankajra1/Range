@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
+import { auth } from "../firebase"; // Import Firebase authentication module
 
 const LinuxTesting = () => {
+  useEffect(() => {
+    // Apply token for authenticated requests
+    auth.currentUser.getIdToken(/* forceRefresh */ true)
+      .then((token) => {
+        // Apply token for requests
+        axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+      })
+      .catch((error) => {
+        console.error('Error getting token:', error);
+      });
+  }, []);
+
   return (
     <div>
       <h2 className="text-[23px] font-semibold mb-4 text-blue-600 hover:text-blue-900 text-center">
@@ -8,7 +22,6 @@ const LinuxTesting = () => {
       </h2>
       <p className="text-black text-left font-[500] text-[17px]">
         You can try your Linux skills here.
-        {/* You can expand this section with more information or interactive components as needed. */}
       </p>
       <div className="mt-4">
         <iframe

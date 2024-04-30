@@ -1,10 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { Auth0Provider } from '@auth0/auth0-react';
+import App from './App';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+const root = createRoot(document.getElementById('root'));
+
+root.render(
+<Auth0Provider
+    domain="cpfrange.us.auth0.com"
+    clientId="fZSAfoYepGUzrQNvV1Z2AkCSycqLd1jS"
+    authorizationParams={{
+      redirect_uri: 'https://range-two.vercel.app/'
+    }}
+  >
     <App />
-  </React.StrictMode>,
-)
+  </Auth0Provider>,
+);
