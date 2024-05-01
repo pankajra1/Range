@@ -10,7 +10,7 @@ root.render(
     domain="cpfrange.us.auth0.com"
     clientId="fZSAfoYepGUzrQNvV1Z2AkCSycqLd1jS"
     authorizationParams={{
-      redirect_uri: 'https://range-two.vercel.app/'
+      redirect_uri: window.location.origin
     }}
   >
     <App />
