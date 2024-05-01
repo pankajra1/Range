@@ -5,44 +5,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { faGripLinesVertical, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useMediaQuery } from "react-responsive";
+import { useAuth0 } from '@auth0/auth0-react'; // Import useAuth0 hook
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [userEmail, setUserEmail] = useState("");
   const dropdownRef = useRef(null);
   const isMobile = useMediaQuery({ maxWidth: 598 });
+  const { user, isAuthenticated, logout } = useAuth0(); // Destructure user, isAuthenticated, and logout from useAuth0
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      setUserEmail(user.email);
+    } else {
+      setUserEmail("");
+    }
+  }, [isAuthenticated, user]);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
-  // useEffect(() => {
-  //   function handleClickOutside(event) {
-  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target) && event.target !== dropdownToggleRef.current) {
-  //       setDropdownOpen(false);
-  //     }
-  //   }
-
-  //   document.addEventListener("mousedown", handleClickOutside);
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, [dropdownRef]);
-
-  useEffect(() => {
-    setUserEmail(sessionStorage.getItem("userEmail") || "");
-
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(false);
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  const logoutHandler = () => {
+    logout({ returnTo: window.location.origin }); // Logout and return to the current URL
+  };
 
   const dropdownToggleRef = useRef(null);
 
@@ -136,12 +122,15 @@ const Navbar = () => {
             >
               Profile
             </Link>
-            <Link
-              to="/"
-              className="block text-gray-800 hover:bg-gray-200 py-1 px-4 whitespace-nowrap"
-            >
-              Sign Out
-            </Link>
+            {/* Display logout link only when user is authenticated */}
+            {isAuthenticated && (
+              <button
+                onClick={logoutHandler}
+                className="block text-gray-800 hover:bg-gray-200 py-1 px-4 whitespace-nowrap"
+              >
+                Sign Out
+              </button>
+            )}
           </div>
         )}
       </div>
